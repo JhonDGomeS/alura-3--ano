@@ -15,7 +15,6 @@ body {
     font-family: 'Chakra Petch', sans-serif;
 }
 
-
 .conteudo-principal {
     display: flex;
     flex-direction: column;
@@ -35,7 +34,6 @@ body {
 .titulo-principal span {
     color: var(--verde);
 }
-
 
 .botao {
     font-family: 'Chakra Petch', sans-serif;
@@ -71,6 +69,7 @@ body {
     padding: 40px;
     border-radius: 0 0 40px 40px;
 }
+
 .aba-conteudo.ativo{
     display:block;
 }
@@ -83,6 +82,7 @@ body {
     font-size: 28px;
     text-align: center;
 }
+
 .aba-conteudo-titulo-secundario{
     text-align: center;
     color: var(--verde);
@@ -100,6 +100,7 @@ body {
     text-align: center;
     min-width: 100px;
 }
+
 .contador-digito-numero{
  font-size: 80px;
  margin: 0;
