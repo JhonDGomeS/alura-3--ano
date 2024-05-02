@@ -35,23 +35,35 @@ function calculaTempo(tempoObjetivo) {
   segundos %= 60;
   minutos %= 60;
   horas %= 24;
-  if (tempoFinal > 0) {
-    return [dias,horas,minutos,segundos];
-    //return (
-    //  dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos");
-  }else{
-    return "Prazo Finalizado";
-  }
-}
-function atualizaCronometro() {
- for (let i = 0; i < contadores.length; i++) {
-  //  contadores[i].textContent = calculaTempo(tempos[i]);
-    document.getElementById("dias0").textContent = calculaTempo(tempos[0])[0];
-    document.getElementById("horas0").textContent = calculaTempo(tempos[0])[1];
-    document.getElementById("min0").textContent = calculaTempo(tempos[0])[2];
-    document.getElementById("seg0").textContent = calculaTempo(tempos[0])[3];
+  if (tempoFinal > 0){
 
-    
+    let contador = '';
+contador += '<div class="contador-digito">';
+contador += '   <p class="contador-digito-numero">'+dias+'</p>';
+contador += '   <p class="contador-digito-texto">Dias</p>';
+contador += '</div>';
+contador += '<div class="contador-digito">';
+contador += '   <p class="contador-digito-numero">'+horas+'</p>';
+contador += '   <p class="contador-digito-texto">Horas</p>';
+contador += '</div>';
+contador += '<div class="contador-digito">';
+contador += '   <p class="contador-digito-numero">'+minutos+'</p>';
+contador += '   <p class="contador-digito-texto">Minutos</p>';
+contador += '</div>';
+contador += '<div class="contador-digito">';
+contador += '   <p class="contador-digito-numero">'+segundos+'</p>';
+contador += '   <p class="contador-digito-texto">Segundos</p>';
+contador += '</div>';
+
+return contador;
+
+ } else {
+    return "Prazo Finalizado";
+ }
+}
+function atualizaCronometro(){
+  for (let i=0; i<contadores.length;i++){
+      contadores[i].innerHTML = calculaTempo(tempos[i]);  
   }
 }
 
